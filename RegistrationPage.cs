@@ -34,7 +34,7 @@ namespace QA_Test
                 driver.FindElement(By.Id("FirstName")).SendKeys("first");
                 driver.FindElement(By.Id("LastName")).SendKeys("user");
                 driver.FindElement(By.Id("Email")).SendKeys("first.user@email.com");
-                driver.FindElement(By.Id("Password")).SendKeys("SamplePassword12%");
+                driver.FindElement(By.Id("Password")).SendKeys("QATestPassoword01$");
                 driver.FindElement(By.Id("ReferralSource")).FindElement(By.CssSelector("option[value='3']")).Click();
                 driver.FindElement(By.Id("HasOptedOutOfMarketingMaterial")).Click();
                 driver.FindElement(By.Name("RegistrationForm")).Click();
@@ -45,7 +45,7 @@ namespace QA_Test
                 //Verify user login
                 driver.FindElement(By.XPath("/html/body/div[1]/nav/ul[1]/li/a")).Click();
                 driver.FindElement(By.Id("Email")).SendKeys("first.user@email.com");
-                driver.FindElement(By.Id("Password")).SendKeys("SamplePassword12%");
+                driver.FindElement(By.Id("Password")).SendKeys("QATestPassoword01$");
                 driver.FindElement(By.CssSelector("body > main > div > div:nth-child(2) > div > form > button")).Click();
 
                 Assert.IsTrue(ValidationTextIsCorrect(driver, "/html/body/main/div/div/div/h1", "Email address not confirmed"));
